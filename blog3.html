@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Classic - Responsive Bootstrap 4.0 Template</title>
+
+    <!-- load stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">                                      <!-- Bootstrap style -->
+    <link rel="stylesheet" href="css/templatemo-style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">                                  <!-- Templatemo style -->
+
+</head>
+
+    <body>
+       
+        <div class="tm-header">
+            <div class="container-fluid">
+                <div class="tm-header-inner">
+                    <a href="#" class="navbar-brand tm-site-name">Lewis</a>
+                    
+                    <!-- navbar -->
+                    <nav class="navbar tm-main-nav">
+
+                        <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#tmNavbar">
+                            &#9776;
+                        </button>
+                        
+                        <div class="collapse navbar-toggleable-sm" id="tmNavbar">
+                            <ul class="nav navbar-nav">
+                                <li class="nav-item">
+                                    <a href="index.html" class="nav-link">Home</a>
+                                </li>
+                                <!-- <li class="nav-item">
+                                    <a href="about.html" class="nav-link">About</a>
+                                </li> -->
+                                <li class="nav-item active">
+                                    <a href="blog.html" class="nav-link">Blog</a>
+                                </li>
+                                <!-- <li class="nav-item">
+                                    <a href="contact.html" class="nav-link">Contact</a>
+                                </li> -->
+                            </ul>                        
+                        </div>
+                        
+                    </nav>  
+
+                </div>                                  
+            </div>            
+        </div>
+
+        <!-- <div class="tm-home-img-container">
+            <img src="img/tm-home-img.jpg" alt="Image" class="hidden-lg-up img-fluid">
+        </div> -->
+
+        <section class="tm-section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-xs-center">
+                        <h2 class="tm-gold-text tm-title" style="color: black"><strong>Week #3 Blog </strong></h2>
+                        <!-- <div class="tm-home-img-container_1">
+                            <img src="img/mujtaba_image.jpeg"  alt="Image" class="hidden-lg-up img-fluid">
+                        </div> -->
+                        <p class="tm-subtitle">
+                            <strong>Explore the File Handling in Python?</strong> <br><br>
+
+                             <strong> File Formats and Python Libraries:  </strong> Two of the most commonly used formats are CSV (Comma-Separated Values) and JSON (JavaScript Object Notation). CSV files are ideal for tabular data, storing information in rows and columns, which is easily understandable and manageable in various data manipulation tools like pandas.
+                             They allow for straightforward importing and exporting of datasets, making them a preferred choice in scenarios where data integrity and structure are essential.
+                             On the other hand, JSON files are particularly valuable when dealing with hierarchical or nested data structures. As a lightweight data interchange format, JSON is easy for both humans and machines to read and write. In Python, the ability to convert JSON strings into Python dictionaries facilitates seamless data manipulation and retrieval.
+                             This makes JSON particularly useful in web development and API interactions, where structured data can be dynamically generated and easily parsed for use in applications.
+                             Understanding how to handle these file formats effectively is foundational for anyone working with data in Python. Libraries like pandas simplify the process of reading from CSV files and generating DataFrames,
+                              which enable powerful data analysis capabilities. Similarly, utilizing Python’s built-in libraries for managing JSON files allows for efficient data exchange and manipulation, making it easier to incorporate data from various sources into data science workflows. <br>
+
+                                    <br>
+                             <strong>Large File Processing in Python:</strong> Handling large datasets is a common task in data analysis and modification. When working with large datasets, it's important to use efficient techniques and tools to ensure optimal performance and avoid memory issues.
+                             By default, Pandas assigns data types that may not be memory-efficient. For numeric columns, consider downcasting to smaller types (e.g., int32 instead of int64, float32 instead of float64). For example, if a column holds values like 0, 1, 2, 3, 4, 5, 6, 7, 8, or 9,
+                              using int8 (8 bits) instead of int64 (64 bits) is sufficient. Similarly, converting object data types to categories can also save memory.
+                              <br>
+                              Use the chunksize parameter in pd.read_csv() to read the dataset in smaller chunks. Process each chunk iteratively to avoid loading the entire dataset into memory at once.
+                              <br>
+                              Dask is a parallel computing library that allows us to scale Pandas workflows to larger-than-memory datasets. Leverage parallel processing for efficient handling of big data.<br>
+                              To handling large datasets in Python involves using streaming techniques, lazy evaluation, parallel processing, and data compression to optimize performance and memory usage. These steps helps to efficiently process and analyze large datasets for data analysis and modification.
+                            <br>
+                            <br>
+
+
+                             <strong> Error Handling in File Operations: </strong> FileNotFoundError is a built-in Python exception that occurs when you attempt to access or manipulate a file that does not
+                              exist in the specified location. This error is a subclass of the OSError and is commonly encountered when working with file operations in Python.<br>
+                             FileNotFoundError typically happens in the following situations:<br>
+
+                            1. Trying to open a non-existent file<br>
+                            2. Attempting to read from a file that has been deleted<br>
+                            3. Accessing a file with an incorrect file path<br>
+
+                            Prevention Strategies<br>
+                            1. Always verify file existence before opening<br>
+                            2. Use proper file path handling<br>
+                            3. Implement robust error checking mechanisms<br>
+                            The most fundamental approach to handling FileNotFoundError is using a try-except block
+                            <br><br>
+
+
+
+                             <strong>Context Managers and the 'with' Statement: </strong> Context managers in Python facilitate the allocation and release of resources precisely when they are needed, ensuring proper cleanup and preventing resource leaks. They are commonly used with the with statement, which guarantees that resources are correctly released at the end of the block, even if exceptions occur. 
+                             When the with block is entered, the context manager's __enter__ method is called. If the as variable clause is present, the return value of __enter__ is assigned to the variable. After the code block within the with statement is executed, the context manager's __exit__ method is called, regardless of whether an exception occurred. This ensures that resources are properly released. 
+                             A common use case for context managers is file handling. The open() function in Python returns a context manager, allowing for simplified file operations.
+                             The with statement in Python is a quite useful tool for properly managing external resources in your programs. It allows you to take advantage of existing context managers to automatically handle the setup and teardown phases whenever you’re dealing with external resources or with operations that require those phases. 
+
+                            Besides, the context management protocol allows you to create your own context managers so you can customize the way you deal with system resources.
+                             <br>
+                             <br>
+                             
+                             <strong>Binary File Handling in Python : </strong> In Python, the key difference between handling text files and binary files lies in how the data is interpreted: text files store data as human-readable characters, while binary files store raw bytes, which are not directly readable by humans; this means you need to specify the file opening mode as "text" for text files and "binary" for binary files to handle them correctly, with "b" appended to the open mode string to indicate binary access.
+                             <br>
+                             Text files store data as characters encoded using ASCII or Unicode, allowing for easy reading in a text editor, while binary files store data as raw bytes, which are not human-readable without specific software. <br>
+                             When reading a text file, Python automatically translates the bytes into characters, while when reading a binary file, you get the raw bytes directly. <br>
+                             Text files are typically used for storing textual information like code or documents, while binary files are used for storing complex data like images, audio, videos, and executable programs. <br>
+                            <br>
+
+                            with open("image.jpg", "rb") as image_file: <br>
+
+                            &nbsp;&nbsp;&nbsp;image_data = image_file.read()  # Reads the entire image as bytes<br>
+
+                            &nbsp;&nbsp;&nbsp;print(image_data[:10])  # Print the first 10 bytes of the image data<br> <br>
+
+                            with open("image.jpg", "rb"): Opens the "image.jpg" file in binary read mode ("rb"). <br>
+                            image_data = image_file.read(): Reads the entire content of the file as bytes and stores it in the image_data variable. <br>
+
+
+                            with open("data.bin", "wb") as data_file: <br>
+
+                            &nbsp;&nbsp;&nbsp;data_to_write = [10, 20, 30, 40]  # List of integers <br>
+
+                            &nbsp;&nbsp;&nbsp;data_file.write(bytes(data_to_write))  # Convert list to bytes before writing <br> <br>
+                            with open("data.bin", "wb"): Opens a file named "data.bin" in binary write mode ("wb"). <br>
+                            bytes(data_to_write): Converts the list of integers to a byte string, which is necessary for writing binary data.  <br>
+                            data_file.write(bytes(data_to_write)): Writes the byte string to the file. <br>
+
+                            When dealing with complex data types like images or audio, you need to understand the underlying data structure of the file format to properly interpret and manipulate the binary data. <br>
+                            For specific file formats, consider using dedicated libraries like Pillow for image manipulation or the wave module for audio processing, which can provide higher-level functions for handling binary data. <br>
+                            <br>
+
+                            <strong>Refrence:</strong> <br>
+                            <a href="https://www.nobledesktop.com/learn/python/handling-different-file-formats-in-python-csv,-json,-and-more" class="nav-link">https://www.nobledesktop.com/file-formats</a>
+                            <a href="https://www.geeksforgeeks.org/handling-large-datasets-in-python/" class="nav-link">https://www.geeksforgeeks.org/datasets</a>
+                            <a href="https://labex.io/tutorials/python-how-to-handle-filenotfounderror-in-python-421944" class="nav-link">https://labex.io/tutorials/handle-filenotfounderror-in-python</a>
+                            <a href="https://realpython.com/python-with-statement/" class="nav-link">https://realpython.com/python-with-statement/</a>
+                            <a href="https://www.geeksforgeeks.org/reading-binary-files-in-python/" class="nav-link">https://www.geeksforgeeks.org/reading-binary-files-in-python/</a>
+                            
+                        </p><br>
+
+                        
+                        
+
+
+
+
+
+
+
+
+                        .
+
+
+
+
+
+
+
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+        
+        <footer class="tm-footer">
+            <div class="container-fluid">
+                <div class="row">
+                    
+                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-4 col-xl-4">
+                        
+                        <div class="tm-footer-content-box">
+                            <h3 class="tm-gold-text tm-title tm-footer-content-box-title">Social Links</h3>
+                            
+                            <a href="https://www.linkedin.com/in/muhammad-mujtaba-aziz-278449202/" target="_blank">
+                                <i class="fab fa-linkedin" style="font-size: 40px;"></i>
+                            </a>
+ 
+                        </div>
+                                                
+                    </div>
+
+
+                    <!-- Add the extra clearfix for only the required viewport 
+                        http://stackoverflow.com/questions/24590222/bootstrap-3-grid-with-different-height-in-each-item-is-it-solvable-using-only
+                    -->
+
+
+                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-4 col-xl-4">
+
+                        <div class="tm-footer-content-box">
+                        
+                            <h3 class="tm-gold-text tm-title tm-footer-content-box-title">Contact</h3>
+                            <p class="tm-margin-b-20"> +1 312 545 2283.</p>
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-4 col-xl-4">
+
+                        <div class="tm-footer-content-box">
+                        
+                            <h3 class="tm-gold-text tm-title tm-footer-content-box-title">Code Refrence</h3>
+                            <a href="https://github.com/mujtabaaziz" target="_blank">
+                                <i class="fab fa-github" style="font-size: 40px;"></i>
+                            </a>
+                            
+
+                        </div>
+                        
+                    </div>
+
+
+                </div>
+
+            </div>
+        </footer>
+
+        <!-- load JS files -->
+        <script src="js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+        <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js"></script> <!-- Tether for Bootstrap, http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h --> 
+        <script src="js/bootstrap.min.js"></script>                 <!-- Bootstrap (http://v4-alpha.getbootstrap.com/) -->
+       
+</body>
+</html>
